@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execercio Extra 1</title>
+</head>
+
+<script>
+    var tipo,descricao,valor,quantidade,total,brinde,imagemPao,imagemLeite,imagemHam,imagemBis,imagemBrinde;
+    
+
+    tipo = prompt("Qual eh o Tipo de Pao: (B - Bisnaga, F - Francês, H - Hambúrguer, L - Leite)")
+    quantidade = prompt("Quantos Pães Voce Vai Comprar")
+    quantidade = parseInt(quantidade)
+    
+    
+    switch(tipo){
+    case "B":
+    case "b":
+        valor = 1.50
+        descricao = ("Bisnaga")
+
+        imagemBis = "bisnaga.jpg"
+    break;
+
+    case "F":
+    case "f":
+        valor = 0.95
+        descricao = ("Francês")
+        imagemPao = "pao.jpg"
+
+    break;
+
+    case "H":
+    case "h":
+        valor = 2.10
+        descricao = ("Hamburguer")
+
+        imagemHam = "hamburguer.jpg"
+    break;
+
+    case "L":
+    case "l":
+        valor = 1.80
+        descricao = ("Leite")
+
+        imagemLeite = "leite.jpg"
+       
+    break;
+    }
+    total = valor * quantidade
+
+   if(tipo == "F" && total >= 150){
+    alert("PARABENS! Voce Ganhou Um Brinde: UM BOLO!!!!");
+    imagemBrinde = "bolo.jpg"
+   }
+    
+    document.write("=RELATÓRIO= <br>");
+    document.write("Quantidade: " + quantidade + "<br>");
+    document.write("Tipo de Pao: " + tipo + "<br>");
+    document.write("Total:R$  " + total + "<br>");
+    document.write("<img src='" + imagemPao + "' alt='" + descricao + "' width='200'><br>");
+
+    if (imagemBrinde) {
+            document.write("<h3>Você ganhou um BRINDE: BOLO!</h3>");
+            document.write("<img src='" + imagemBrinde + "' alt='Bolo' width='200'><br>");
+        }
+
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

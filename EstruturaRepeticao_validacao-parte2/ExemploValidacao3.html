@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Validacao 3</title>
+</head>
+<body>
+  <script>
+    /* Faça um programa em JavaScript que solicite a altura de uma pessoa 
+	(entre 0,80 m e 2,10 m)
+	  e o seu sexo (m ou f) calcule e mostre o peso ideal conforme abaixo:
+      Homens(masculino) – peso ideal = (72.7 * altura )-58
+      Mulheres(feminino) – peso ideal =(62.1 * altura ) – 44.7
+	  
+	  obs: validar altura e sexo*/
+
+    var altura, sexo , pesoIh , pesoIm;
+
+    do {
+      altura = prompt("Digite a Sua Altura 0.80 e 2.10m:");
+      altura = parseFloat(altura)
+      if(isNaN(altura) || altura < 0.80 || altura > 2.10 ){
+        alert("=VALOR INVÁLIDO=");
+      }
+    } while(isNaN(altura) || altura < 0.80 || altura > 2.10);
+
+
+    do {
+      sexo = prompt("Digite o Seu Sexo entre Masculino(m) e Feminino(f)");
+
+      if(sexo != null ){
+        sexo = sexo.toLowerCase();
+      }
+      if (sexo != "m" && sexo != "f") {
+        alert("=VALOR INVALIDO=")
+      }
+    } while (sexo != "m" && sexo != "f");
+
+
+    if(sexo == "m"){
+      pesoIh = (72.7 * altura)-58;
+      document.write("Seu Peso Ideal sendo Do Sexo Masculino será: " + pesoIh.toFixed(2) + "kg");
+    } else if (sexo == "f") {
+      pesoIm = (62.1 *altura)-44.7;
+      document.write("Seu Peso Ideal sendo Do Sexo Feminino será: " + pesoIm.toFixed(2) + "kg");
+    } else {
+      document.write("Programa Encerrado:")
+    }
+
+    
+    
+
+
+
+
+  
+
+    
+   
+
+
+
+
+	  
+	
+	
+	
+	</script> 
+
+
+
+</body>
+</html>

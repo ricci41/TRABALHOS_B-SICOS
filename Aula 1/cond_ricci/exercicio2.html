@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 2</title>
+</head>
+<script>
+    var codigo,valor,quantidade,total,lanche;
+
+    codigo = prompt("=Qual eh o Código no Cardapio:");
+    codigo = parseInt(codigo);
+    quantidade = prompt("=Digite a quantidade desejada=");
+    quantidade = parseInt(quantidade);
+    
+    if(codigo == 100){
+    document.write("Lanche Cachorro-Quente");
+    valor = 8.00;
+    } else if (codigo == 101){
+    document.write("Lanche Hambúrguer");
+    valor = 9.00;
+    } else if (codigo== 102){
+    document.write("Lanche X-Burguer");
+    valor = 10.00;
+    } else if (codigo == 103){
+    document.write("Lanche Bauru Simples");
+    valor = 9.50;
+    } else if(codigo == 104){
+    document.write("Lanche Bauru duplo");
+    valor = 10.50;
+
+    } else {
+        document.write("INVALIDO BANDIDO MAL");
+    }
+    total = quantidade * valor;
+
+    document.write("=Resumo do Pedido=");
+    document.write("Lanche"+lanche + "<br>");
+    document.write("Quantidade:"+ quantidade + "<br")
+    document.write("Total:R$"+ total.toFixed(2);)
+    
+</script>
+<body>
+    
+</body>
+</html>

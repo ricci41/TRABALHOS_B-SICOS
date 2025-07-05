@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico Extra 2</title>
+</head>
+<script>
+    var precoEtano = 3.99 , precoGasolina = 6.80 , tipo , litros , desconto = 0 , precoLitro  = 0, total = 0, combustivel
+
+    tipo = prompt("Digite o Tipo de Combustivel : (E - Etanol / G - Gasolina:)");
+    litros = prompt("Digite a Quantidade de litros:");
+    litros = parseFloat(litros)
+
+    switch(tipo){
+        case "E":
+        case "e":
+        precoLitro = precoEtanol;
+        combustivel = "Etanol";
+        if(litros >= 25){
+            desconto =  0.02;            
+        } else {
+            desconto = 0.04;
+        }
+        break;
+
+        case "G":
+        case "g":
+        precoLitro = precoGasolina
+        combustivel = "Gasolina";
+        if(litros <= 25){
+            desconto = 0.03;
+        } else {
+            desconto = 0.05
+        }
+        break;
+
+        total = litros * precoLitro * (1 - desconto);
+
+        document.write(
+            "Combustivel:  " + combustivel + "<br>" +
+            "Litros:  " + litros + "<br>" + 
+            "Preço por Litros : R$ " + precoLitro.toFixed(2) + "<br>"+
+            "Total a Pagar: R$ " + total.toFixed(2)
+        );
+
+        
+    }
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

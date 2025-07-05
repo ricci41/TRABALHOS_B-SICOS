@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 3</title>
+</head>
+<script>
+    var produto,codigo,aumento,total;
+    produto = prompt("Qual e o Valor do Seu Produto");
+    produto = parseInt(produto);
+    codigo = prompt("=Digite o Número do seu Código=");
+    codigo = parseInt(codigo);
+
+    if(codigo = 1){
+        document.write("Seu Aumento Sera de 10%");
+        aumento = 0.15;
+    } else if(codigo = 3){
+        document.write("Seu Aumento Sera de 20%");
+        aumento = 0.20;
+    } else if (codigo = 4){
+        document.write("Seu Aumento Sera de 35%");
+        aumento = 0.35;
+    } else if (codigo = 8){
+        document.write("Seu Aumento Sera de 40%");
+        aumento = 0.40;
+    } else {
+        document.write("INVALIDO");
+    }
+    total = produto * aumento;
+    
+
+
+    document.write("=Reajuste=");
+    document.write("Produto"+ produto + "<br>");
+    document.write("Valor Anterior:"- produto - "<br");
+    document.write("Diferença de Valores"- produto - total - "<br>")
+    document.write("Total:R$"+ total.toFixed(2));
+
+</script>
+<body>
+    
+</body>
+</html>

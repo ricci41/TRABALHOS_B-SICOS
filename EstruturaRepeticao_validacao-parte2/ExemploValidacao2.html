@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemplo Validacao 2</title>
+</head>
+<body>
+	<script>
+		/* Uma empresa pretende reajustar o valor dos seus produtos de acordo com a categoria.
+		   Faça um programa em JavaScript que solicite o valor de um produto (de R$20,00 a R$500,00),
+		   e a categoria (B- bebida, F-frios, A-acougue), calcule e exiba os 
+		   dados digitados e o valor reajustado conforme tabela abaixo
+		   
+		   categoria      reajuste
+		   B              5%
+		   F              10%
+		   A              15%
+		 */  
+		  
+		var valor, cat , re , valorF;
+	 
+		
+		//entrada e validação do valor
+		do{
+		  valor=parseFloat(prompt("Digite o valor do produto de 20,00 a 500,00"));
+		  if (isNaN(valor) || valor<20 || valor >500)
+
+			alert("Valor invalido! \nDigite valores de R$20,00 a R$500,00");
+		}while (isNaN(valor) ||valor<20 || valor >500);
+			 
+		
+		//entrada e validação da categoria
+		do{
+		  cat=prompt("Digite a categoria \nB- bebidas \nF-frios \nA-açougue");
+		  cat=cat.toUpperCase();
+		 
+		  if (cat==""|| cat==null ||cat!='B' && cat!='F' && cat!='A')
+
+			alert("Categoria invalida! \nDigite \nB- bebidas \nF-frios \nA-açougue");
+		}while (cat==""|| cat==null ||cat!='B' && cat!='F' && cat!='A');
+
+
+		if (cat == "B") {
+			re = 0.05;
+		} else if ( cat == "F"){
+			re = 0.10;
+		} else if (cat == "A"){
+			re = 0.15;
+		}
+		valorF = valor + (valor * re);
+
+		document.write("Produto:\n"+
+			"Valor Inicial: R$ " + valor.toFixed(2) + "\n" + 
+			"Categoria do Produto:" + car + "\n" +
+			"Valor Reajustado: R$" + valorF.toFixed(2));
+		
+
+
+		
+	
+		
+		</script>
+</body>
+</html>
+
